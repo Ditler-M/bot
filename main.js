@@ -146,6 +146,13 @@ btn12.addEventListener("click", function () {
         tg.MainButton.show();
     }
 });
+DISC = {
+    '1': 'sdfglkfghj'
+}
+@dp.message_handler(content_types='web_app_data')
+async def buy_process(web_app_message):
+    await bot.send_message(web_app_message.chat.id,
+DISC[f'{web_app_message.web_app_data}'])
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
